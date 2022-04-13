@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Add a New Course</h2>
+
+<div class="mt-4 row justify-content-md-center">
+  <div class="col-md-6">
+    
+  <form action="/add" method="post">
+  <div class="row mb-3">
+    <label for="inputCourseName" class="col-sm-2 col-form-label">Course Name</label>
+    <div class="col-sm-10">
+      <input type="text" name="courseName" class="form-control" id="inputCourseName" autocomplete="off">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputTeacher" class="col-sm-2 col-form-label">Teacher</label>
+    <div class="col-md-10">
+      <input type="text" name="teacher" class="form-control" id="inputTeacher" autocomplete="off">
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label for="inputRoom" class="col-sm-2 col-form-label">Room</label>
+    <div class="col-sm-10">
+      <input type="text" name="room" class="form-control" id="inputRoom" autocomplete="off">
+    </div>
+  </div>
+    <div class="row mb-3">
+    <label for="inputDepartment" class="col-sm-2 col-form-label text-wrap">Department</label>
+    <div class="col-sm-10">
+      <input type="text" name="department" class="form-control" id="inputDepartment" autocomplete="off">
+    </div>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Add Course</button>
+  </form>
+  </div>
+</div>
+
+
+{% endblock %}

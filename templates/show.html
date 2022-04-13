@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>ALL COURSES</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Course Name</th>
+      <th scope="col">Teacher</th>
+      <th scope="col">Room</th>
+      <th scope="col">Department</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in courses %}
+    <tr>
+      <td>{{ course.name }}</td>
+      <td>{{ course.teacher }}</td>
+      <td>{{ course.room }}</td>
+      <td>{{ course.department }}</td>
+      <td>
+        <a class="mx-auto me-2" href="/edit/{{ course.id }}"><i class="bi bi-pencil-square"></i></a>
+        <a class="mx-auto me-2" href="/delete/{{ course.id }}">
+          <i class="bi bi-trash"></i>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
